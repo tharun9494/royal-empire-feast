@@ -9,9 +9,12 @@ import LocationSection from "@/components/LocationSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import MobileFloatingCTA from "@/components/MobileFloatingCTA";
+import WhatsAppButton from "@/components/WhatsAppButton";
+import DemoBanner from "@/components/DemoBanner";
 
 const Index = () => (
   <>
+    <DemoBanner />
     <Navbar />
     <HeroSection />
     <div className="gold-divider" />
@@ -29,6 +32,7 @@ const Index = () => (
     <CTASection />
     <Footer />
     <MobileFloatingCTA />
+    <WhatsAppButton />
   </>
 );
 
