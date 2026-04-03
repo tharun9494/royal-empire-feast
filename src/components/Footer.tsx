@@ -1,6 +1,13 @@
 import CrownIcon from "./CrownIcon";
+import { Instagram, Facebook, Youtube } from "lucide-react";
 
 const links = ["Home", "About", "Menu", "Gallery", "Reviews", "Find Us"];
+
+const socials = [
+  { icon: Instagram, href: "#", label: "Instagram" },
+  { icon: Facebook, href: "#", label: "Facebook" },
+  { icon: Youtube, href: "#", label: "YouTube" },
+];
 
 const Footer = () => {
   const scrollTo = (id: string) => {
@@ -20,9 +27,21 @@ const Footer = () => {
                 Nawabz Empire Fine Dine Restaurant
               </span>
             </div>
-            <p className="font-body text-xs text-royal-cream/60">
+            <p className="font-body text-xs text-royal-cream/60 mb-4">
               A Kingdom of Flavor. A Feast Fit for Royalty.
             </p>
+            <div className="flex gap-3">
+              {socials.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  aria-label={s.label}
+                  className="text-royal-cream/50 hover:text-primary transition-colors"
+                >
+                  <s.icon size={18} />
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Nav */}
