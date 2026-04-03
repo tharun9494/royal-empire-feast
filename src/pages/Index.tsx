@@ -32,6 +32,7 @@ const Index = () => (
     <CTASection />
     <Footer />
     <MobileFloatingCTA />
+    <WhatsAppButton />
   </>
 );
 
