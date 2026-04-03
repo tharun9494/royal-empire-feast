@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import CrownIcon from "./CrownIcon";
 import { Menu, X } from "lucide-react";
+import logoImg from "@/assets/logo.png";
 
 const links = ["Home", "About", "Menu", "Gallery", "Reviews", "Find Us"];
 
@@ -28,7 +28,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex items-center justify-between h-16 md:h-20">
         <div className="flex items-center gap-2">
-          <CrownIcon className="w-5 h-5 text-primary" />
+          <img src={logoImg} alt="Nawabz Empire Logo" className="w-8 h-8 rounded-full object-cover" />
           <span className="font-heading text-sm md:text-base font-semibold text-foreground tracking-wide">
             Nawabz Empire
           </span>
@@ -59,7 +59,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile drawer */}
       {mobileOpen && (
         <div className="md:hidden bg-royal-brown text-royal-ivory">
           <div className="flex flex-col px-6 py-6 gap-4">
